@@ -1,0 +1,16 @@
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  min-height: 100%;
+  background: rgb(71, 70, 70);
+}
+
+.box:hover {
+  cursor: pointer;
+}
+
+.text {
+  color: rgb(255, 255, 255);
+}

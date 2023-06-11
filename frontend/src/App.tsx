@@ -1,9 +1,10 @@
 import React from "react";
+import NumbersGrid from "./components/NumbersGrid";
 
 function App() {
   return (
     <>
-      <h1>Calculator</h1>
+      <NumbersGrid />
     </>
   );
 }
