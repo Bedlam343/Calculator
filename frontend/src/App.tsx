@@ -1,11 +1,14 @@
-import React from "react";
-import NumbersGrid from "./components/NumbersGrid";
+import Screen from "./components/Screen";
+import FullGrid from "./components/Grids/FullGrid";
+import cssClasses from "./App.module.css";
 
 function App() {
+  const { box } = cssClasses;
   return (
-    <>
-      <NumbersGrid />
-    </>
+    <div className={box}>
+      <Screen />
+      <FullGrid />
+    </div>
   );
 }
 

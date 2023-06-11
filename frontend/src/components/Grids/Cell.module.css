@@ -2,13 +2,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 100%;
-  min-height: 100%;
-  background: rgb(71, 70, 70);
+  min-width: 4em;
+  min-height: 4em;
+  background: rgb(103, 103, 103);
 }
 
 .box:hover {
   cursor: pointer;
+  background: rgb(78, 78, 78);
 }
 
 .text {
