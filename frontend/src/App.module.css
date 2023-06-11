@@ -1,4 +1,12 @@
 .box {
   display: flex;
   justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  border-radius: 0px;
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
 }
