@@ -1,59 +1,57 @@
-import { Box, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import Cell from "./Cell";
-import classes from "./FullGrid.module.css";
 
 const FullGrid = () => {
-  const { box } = classes;
   return (
-    <Box className={box}>
+    <div style={{ width: "18em" }}>
       <Grid container columns={4} spacing={0.5}>
         <Grid item xs={1}>
-          <Cell>AC</Cell>
+          <Cell type="other">AC</Cell>
         </Grid>
         <Grid item xs={1}>
-          <Cell>+/-</Cell>
+          <Cell type="other">+/-</Cell>
         </Grid>
         <Grid item xs={1}>
-          <Cell>%</Cell>
+          <Cell type="other">%</Cell>
         </Grid>
         <Grid item xs={1}>
-          <Cell>/</Cell>
+          <Cell type="operator">/</Cell>
         </Grid>
         <Grid item xs={1}>
-          <Cell>7</Cell>
+          <Cell>{7}</Cell>
         </Grid>
         <Grid item xs={1}>
-          <Cell>8</Cell>
+          <Cell>{8}</Cell>
         </Grid>
         <Grid item xs={1}>
-          <Cell>9</Cell>
+          <Cell>{9}</Cell>
         </Grid>
         <Grid item xs={1}>
-          <Cell>x</Cell>
+          <Cell type="operator">x</Cell>
         </Grid>
         <Grid item xs={1}>
-          <Cell>4</Cell>
+          <Cell>{4}</Cell>
         </Grid>
         <Grid item xs={1}>
-          <Cell>5</Cell>
+          <Cell>{5}</Cell>
         </Grid>
         <Grid item xs={1}>
-          <Cell>6</Cell>
+          <Cell>{6}</Cell>
         </Grid>
         <Grid item xs={1}>
-          <Cell>-</Cell>
+          <Cell type="operator">-</Cell>
         </Grid>
         <Grid item xs={1}>
-          <Cell>1</Cell>
+          <Cell>{1}</Cell>
         </Grid>
         <Grid item xs={1}>
-          <Cell>2</Cell>
+          <Cell>{2}</Cell>
         </Grid>
         <Grid item xs={1}>
-          <Cell>3</Cell>
+          <Cell>{3}</Cell>
         </Grid>
         <Grid item xs={1}>
-          <Cell>+</Cell>
+          <Cell type="operator">+</Cell>
         </Grid>
         <Grid item xs={2}>
           <Cell>0</Cell>
@@ -62,10 +60,10 @@ const FullGrid = () => {
           <Cell>.</Cell>
         </Grid>
         <Grid item xs={1}>
-          <Cell>=</Cell>
+          <Cell type="operator">=</Cell>
         </Grid>
       </Grid>
-    </Box>
+    </div>
   );
 };
 

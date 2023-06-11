@@ -4,12 +4,31 @@
   align-items: center;
   min-width: 4em;
   min-height: 4em;
-  background: rgb(103, 103, 103);
 }
 
 .box:hover {
   cursor: pointer;
-  background: rgb(78, 78, 78);
+}
+
+.operand {
+  background: rgb(103, 103, 103);
+}
+.operand:hover {
+  opacity: 75%;
+}
+
+.operator {
+  background: rgb(238, 156, 4);
+}
+.operator:hover {
+  opacity: 75%;
+}
+
+.other {
+  background: rgb(154, 153, 153);
+}
+.other:hover {
+  opacity: 75%;
 }
 
 .text {
