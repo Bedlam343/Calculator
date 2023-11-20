@@ -6,6 +6,8 @@ export type CalculatorContextType = {
   operator: string;
   setOperand: (operand: string) => void;
   setOperator: (operator: string) => void;
+  calculate: () => void;
+  clear: () => void;
 };
 
 export type CalculatorStateType = {
@@ -24,6 +26,8 @@ const CalculatorContext = createContext<CalculatorContextType>({
   ...initialCalculatorState,
   setOperand: () => {},
   setOperator: () => {},
+  calculate: () => {},
+  clear: () => {},
 });
 
 export default CalculatorContext;

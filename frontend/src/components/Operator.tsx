@@ -7,10 +7,24 @@ type OperatorProps = {
 };
 
 const Operator = ({ operator: { value } }: OperatorProps) => {
-  const { setOperator } = useCalculatorContext();
+  const { setOperator, calculate, clear } = useCalculatorContext();
+
+  const handleClick = () => {
+    if (value === "AC") {
+      clear();
+      return;
+    }
+
+    if (value === "=") {
+      calculate();
+      return;
+    }
+
+    setOperator(value);
+  };
 
   return (
-    <Box sx={styles.box} onClick={() => setOperator(value)}>
+    <Box sx={styles.box} onClick={handleClick}>
       <Typography color="white">{value}</Typography>
     </Box>
   );
