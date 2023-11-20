@@ -13,12 +13,16 @@ const Buttons = () => {
           let cell: ReactNode = null;
 
           if (col.type === OPERATOR) {
-            cell = <Operator key={i + j} operator={col} onClick={() => {}} />;
+            cell = <Operator key={i + j} operator={col} />;
           } else if (col.type === OPERAND) {
-            cell = <Operand key={i + j} operand={col} onClick={() => {}} />;
+            cell = <Operand key={i + j} operand={col} />;
           }
 
-          return <Grid item xs={1} key={i + j}>{cell}</Grid>;
+          return (
+            <Grid item xs={1} key={i + j}>
+              {cell}
+            </Grid>
+          );
         });
       })}
     </Grid>

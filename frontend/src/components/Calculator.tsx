@@ -1,15 +1,12 @@
 import { Box, Grid } from "@mui/material";
 import Buttons from "components/Buttons";
 import Screen from "components/Screen";
-import { useState } from "react";
 
 const Calculator = () => {
-  const [expression, setExpression] = useState<string>("");
-
   return (
     <Box sx={styles.box}>
       <Grid sx={styles.grid} container columns={1}>
-        <Screen expression={expression} />
+        <Screen />
         <Buttons />
       </Grid>
     </Box>

@@ -5,9 +5,9 @@ const add: cell = { type: OPERATOR, value: "+" };
 const subtract: cell = { type: OPERATOR, value: "-" };
 const multiply: cell = { type: OPERATOR, value: "x" };
 const divide: cell = { type: OPERATOR, value: "/" };
-const modulo: cell = { type: OPERATOR, value: "%" };
+const mod: cell = { type: OPERATOR, value: "mod" };
+const percent: cell = { type: OPERATOR, value: "%" };
 const equals: cell = { type: OPERATOR, value: "=" };
-const flipSign: cell = { type: OPERATOR, value: "+/-" };
 const allClear: cell = { type: OPERATOR, value: "AC" };
 
 const operators = {
@@ -15,9 +15,9 @@ const operators = {
   subtract,
   multiply,
   divide,
-  modulo,
+  percent,
   equals,
-  flipSign,
+  mod,
   allClear,
 };
 

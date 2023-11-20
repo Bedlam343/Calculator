@@ -1,14 +1,16 @@
 import { Box, Typography } from "@mui/material";
 import cell from "util/cell";
+import { useCalculatorContext } from "context/CalculatorContextProvider";
 
 type OperandProps = {
   operand: cell;
-  onClick: () => void;
 };
 
-const Operand = ({ operand: { value }, onClick }: OperandProps) => {
+const Operand = ({ operand: { value } }: OperandProps) => {
+  const { setOperand } = useCalculatorContext();
+
   return (
-    <Box sx={styles.box}>
+    <Box sx={styles.box} onClick={() => setOperand(value)}>
       <Typography color="white">{value}</Typography>
     </Box>
   );
