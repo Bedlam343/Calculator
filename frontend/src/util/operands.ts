@@ -1,19 +1,23 @@
-import cell from "util/cell";
 import { OPERAND } from "util/constants";
 
-const empty: cell = { type: OPERAND, value: "" };
-const zero: cell = { type: OPERAND, value: "0" };
-const one: cell = { type: OPERAND, value: "1" };
-const two: cell = { type: OPERAND, value: "2" };
-const three: cell = { type: OPERAND, value: "3" };
-const four: cell = { type: OPERAND, value: "4" };
-const five: cell = { type: OPERAND, value: "5" };
-const six: cell = { type: OPERAND, value: "6" };
-const seven: cell = { type: OPERAND, value: "7" };
-const eight: cell = { type: OPERAND, value: "8" };
-const nine: cell = { type: OPERAND, value: "9" };
+export type operand = {
+  type: 'operand';
+  value: string;
+};
 
-const decimal: cell = { type: OPERAND, value: "." };
+const empty: operand = { type: OPERAND, value: "" };
+const zero: operand = { type: OPERAND, value: "0" };
+const one: operand = { type: OPERAND, value: "1" };
+const two: operand = { type: OPERAND, value: "2" };
+const three: operand = { type: OPERAND, value: "3" };
+const four: operand = { type: OPERAND, value: "4" };
+const five: operand = { type: OPERAND, value: "5" };
+const six: operand = { type: OPERAND, value: "6" };
+const seven: operand = { type: OPERAND, value: "7" };
+const eight: operand = { type: OPERAND, value: "8" };
+const nine: operand = { type: OPERAND, value: "9" };
+
+const decimal: operand = { type: OPERAND, value: "." };
 
 const operands = {
   empty,

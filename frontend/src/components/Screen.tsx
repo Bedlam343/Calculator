@@ -6,8 +6,10 @@ const Screen = () => {
   const [expression, setExpression] = useState<string>("");
   const { operand1, operand2, operator } = useCalculatorContext();
 
+  const { symbol: operatorSymbol } = operator ?? { symbol: "" };
+
   useEffect(() => {
-    setExpression(`${operand1} ${operator} ${operand2}`);
+    setExpression(`${operand1} ${operatorSymbol} ${operand2}`);
   }, [operand1, operand2, operator]);
 
   return (

@@ -4,6 +4,7 @@ import CalculatorContext, {
   CalculatorStateType,
   initialCalculatorState,
 } from "context/CalculatorContext";
+import { operator } from "util/operators";
 
 type PropsType = {
   children: ReactNode;
@@ -35,14 +36,19 @@ const CalculatorContextProvider = ({ children }: PropsType) => {
     setCalculatorState((state) => ({ ...state, operand2: operand2 + operand }));
   };
 
-  const setOperator = (operator: string) => {
+  const setOperator = (operator: operator) => {
     if (!operand1) return;
     setCalculatorState((state) => ({ ...state, operator }));
   };
 
   const calculate = () => {
     if (!operand1 || !operand2 || !operator) return;
-    // make operator to the correct operation??
+
+    const result = operator.call!(operand1, operand2);
+    setCalculatorState({
+      ...initialCalculatorState,
+      operand1: result,
+    });
   };
 
   const clear = () => {

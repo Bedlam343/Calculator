@@ -1,31 +1,32 @@
 import { Box, Typography } from "@mui/material";
 import { useCalculatorContext } from "context/CalculatorContextProvider";
-import cell from "util/cell";
+import { operator } from "util/operators";
 
 type OperatorProps = {
-  operator: cell;
+  operator: operator;
 };
 
-const Operator = ({ operator: { value } }: OperatorProps) => {
+const Operator = ({ operator }: OperatorProps) => {
   const { setOperator, calculate, clear } = useCalculatorContext();
+  const { symbol } = operator;
 
   const handleClick = () => {
-    if (value === "AC") {
+    if (symbol === "AC") {
       clear();
       return;
     }
 
-    if (value === "=") {
+    if (symbol === "=") {
       calculate();
       return;
     }
 
-    setOperator(value);
+    setOperator(operator);
   };
 
   return (
     <Box sx={styles.box} onClick={handleClick}>
-      <Typography color="white">{value}</Typography>
+      <Typography color="white">{symbol}</Typography>
     </Box>
   );
 };

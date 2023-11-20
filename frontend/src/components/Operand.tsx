@@ -1,9 +1,9 @@
 import { Box, Typography } from "@mui/material";
-import cell from "util/cell";
 import { useCalculatorContext } from "context/CalculatorContextProvider";
+import { operand } from "util/operands";
 
 type OperandProps = {
-  operand: cell;
+  operand: operand;
 };
 
 const Operand = ({ operand: { value } }: OperandProps) => {
